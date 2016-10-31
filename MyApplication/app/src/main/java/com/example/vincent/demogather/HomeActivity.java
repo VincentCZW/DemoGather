@@ -1,52 +1,92 @@
 package com.example.vincent.demogather;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
 
-public class HomeActivity extends AppCompatActivity {
+import com.example.vincent.demogather.activity.TouchEventTestActivity;
+
+public class HomeActivity extends Activity {
+
+    private Button btnTouchEventTest;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+        Log.d("Vincent", "Home onCreate");
+//        new Handler().postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                Intent intent = new Intent(HomeActivity.this, OtherActivity.class);
+//                HomeActivity.this.startActivity(intent);
+//            }
+//        }, 2500);
+
+        initViews();
+        bindListener();
+    }
+
+    private void initViews() {
+        btnTouchEventTest = (Button) findViewById(R.id.touch_event_test);
+    }
+
+    private void bindListener() {
+        btnTouchEventTest.setOnClickListener(clickListener);
+    }
+
+    private View.OnClickListener clickListener = new View.OnClickListener() {
+
+        @Override
+        public void onClick(View v) {
+            Intent intent = null;
+            switch (v.getId()) {
+                case R.id.touch_event_test:
+                    intent = new Intent(HomeActivity.this, TouchEventTestActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
             }
-        });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_home, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
         }
+    };
 
-        return super.onOptionsItemSelected(item);
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d("Vincent", "Home onStart");
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        Log.d("Vincent", "Home onResume");
+    }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.d("Vincent", "Home onRestart");
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        Log.d("Vincent", "Home onPuase");
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        Log.d("Vincent", "Home onStop");
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        Log.d("Vincent", "Home onDestroy");
     }
 }
