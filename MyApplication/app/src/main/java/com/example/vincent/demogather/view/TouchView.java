@@ -15,6 +15,8 @@ public class TouchView extends TextView {
     public TouchView(Context context) {
         super(context);
         init();
+        hashCode();
+        equals(this);
     }
 
     public TouchView(Context context, AttributeSet attrs) {

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/sychronized_test_1"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问同一个对象同一个Sync修饰的成员方法"/>
+
+    <Button
+        android:id="@+id/sychronized_test_2"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问同一个对象不同Sync修饰的成员方法"/>
+
+    <Button
+        android:id="@+id/sychronized_test_3"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问同一个对象Sync(this) 和 sync修饰的成员方法"/>
+
+    <Button
+        android:id="@+id/sychronized_test_4"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问不同对象sync修饰的同一个成员方法"/>
+
+    <Button
+        android:id="@+id/sychronized_test_5"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问对象Sync method 和 sync static methods"/>
+
+    <Button
+        android:id="@+id/sychronized_test_6"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问类中两个不同的sync static methods"/>
+
+    <Button
+        android:id="@+id/sychronized_test_7"
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="访问类中相同的sync static methods"/>
+</LinearLayout>

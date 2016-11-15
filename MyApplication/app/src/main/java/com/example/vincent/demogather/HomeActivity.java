@@ -7,11 +7,18 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.vincent.demogather.activity.FrescoLoadImageListActivity;
+import com.example.vincent.demogather.activity.MutiThreadTestMainActivity;
 import com.example.vincent.demogather.activity.TouchEventTestActivity;
+import com.example.vincent.demogather.adapter.FrescoImageLoadAdapter;
 
 public class HomeActivity extends Activity {
 
     private Button btnTouchEventTest;
+
+    private Button btnFrescoTest;
+
+    private Button btnMutiThread;
 
 
     @Override
@@ -19,25 +26,20 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        Log.d("Vincent", "Home onCreate");
-//        new Handler().postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                Intent intent = new Intent(HomeActivity.this, OtherActivity.class);
-//                HomeActivity.this.startActivity(intent);
-//            }
-//        }, 2500);
-
         initViews();
         bindListener();
     }
 
     private void initViews() {
         btnTouchEventTest = (Button) findViewById(R.id.touch_event_test);
+        btnFrescoTest = (Button) findViewById(R.id.fresco_test);
+        btnMutiThread = (Button) findViewById(R.id.muti_thread_test);
     }
 
     private void bindListener() {
         btnTouchEventTest.setOnClickListener(clickListener);
+        btnFrescoTest.setOnClickListener(clickListener);
+        btnMutiThread.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -48,6 +50,14 @@ public class HomeActivity extends Activity {
             switch (v.getId()) {
                 case R.id.touch_event_test:
                     intent = new Intent(HomeActivity.this, TouchEventTestActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.fresco_test:
+                    intent = new Intent(HomeActivity.this, FrescoLoadImageListActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.muti_thread_test:
+                    intent = new Intent(HomeActivity.this, MutiThreadTestMainActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
             }
