@@ -9,16 +9,16 @@ import android.widget.Button;
 
 import com.example.vincent.demogather.activity.FrescoLoadImageListActivity;
 import com.example.vincent.demogather.activity.MutiThreadTestMainActivity;
+import com.example.vincent.demogather.activity.RetrofitActivity;
 import com.example.vincent.demogather.activity.TouchEventTestActivity;
 import com.example.vincent.demogather.adapter.FrescoImageLoadAdapter;
 
 public class HomeActivity extends Activity {
 
     private Button btnTouchEventTest;
-
     private Button btnFrescoTest;
-
     private Button btnMutiThread;
+    private Button btnRetrofitTest;
 
 
     @Override
@@ -34,12 +34,14 @@ public class HomeActivity extends Activity {
         btnTouchEventTest = (Button) findViewById(R.id.touch_event_test);
         btnFrescoTest = (Button) findViewById(R.id.fresco_test);
         btnMutiThread = (Button) findViewById(R.id.muti_thread_test);
+        btnRetrofitTest = (Button) findViewById(R.id.net_quest_test);
     }
 
     private void bindListener() {
         btnTouchEventTest.setOnClickListener(clickListener);
         btnFrescoTest.setOnClickListener(clickListener);
         btnMutiThread.setOnClickListener(clickListener);
+        btnRetrofitTest.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -60,6 +62,11 @@ public class HomeActivity extends Activity {
                     intent = new Intent(HomeActivity.this, MutiThreadTestMainActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
+                case R.id.net_quest_test:
+                    intent = new Intent(HomeActivity.this, RetrofitActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+
             }
         }
     };

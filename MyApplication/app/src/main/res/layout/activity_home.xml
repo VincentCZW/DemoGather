@@ -37,5 +37,15 @@
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:text="多线程相关DEMO" />
+
+        <Button
+            android:id="@+id/net_quest_test"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Retrofit网络框架DEMO" />
     </LinearLayout>
 </ScrollView>

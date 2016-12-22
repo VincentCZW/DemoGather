@@ -28,6 +28,7 @@
         <activity android:name=".activity.MutiThreadTestMainActivity"/>
         <activity android:name=".activity.SychronizedTestActivity" />
         <activity android:name=".activity.WaitNotifyActivity"/>
+        <activity android:name=".activity.RetrofitActivity"/>
     </application>
 
 </manifest>
