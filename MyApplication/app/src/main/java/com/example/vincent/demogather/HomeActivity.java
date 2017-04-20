@@ -11,7 +11,8 @@ import com.example.vincent.demogather.activity.FrescoLoadImageListActivity;
 import com.example.vincent.demogather.activity.MutiThreadTestMainActivity;
 import com.example.vincent.demogather.activity.RetrofitActivity;
 import com.example.vincent.demogather.activity.TouchEventTestActivity;
-import com.example.vincent.demogather.adapter.FrescoImageLoadAdapter;
+import com.example.vincent.demogather.anr.ANRMainActivity;
+import com.example.vincent.demogather.diy_view.DiyViewMainActivity;
 
 public class HomeActivity extends Activity {
 
@@ -19,6 +20,8 @@ public class HomeActivity extends Activity {
     private Button btnFrescoTest;
     private Button btnMutiThread;
     private Button btnRetrofitTest;
+    private Button diyViewTest;
+    private Button anrTest;
 
 
     @Override
@@ -35,6 +38,8 @@ public class HomeActivity extends Activity {
         btnFrescoTest = (Button) findViewById(R.id.fresco_test);
         btnMutiThread = (Button) findViewById(R.id.muti_thread_test);
         btnRetrofitTest = (Button) findViewById(R.id.net_quest_test);
+        diyViewTest = (Button) findViewById(R.id.diy_view_test);
+        anrTest = (Button) findViewById(R.id.anr_test);
     }
 
     private void bindListener() {
@@ -42,6 +47,8 @@ public class HomeActivity extends Activity {
         btnFrescoTest.setOnClickListener(clickListener);
         btnMutiThread.setOnClickListener(clickListener);
         btnRetrofitTest.setOnClickListener(clickListener);
+        diyViewTest.setOnClickListener(clickListener);
+        anrTest.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -66,7 +73,14 @@ public class HomeActivity extends Activity {
                     intent = new Intent(HomeActivity.this, RetrofitActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
-
+                case R.id.diy_view_test:
+                    intent = new Intent(HomeActivity.this, DiyViewMainActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.anr_test:
+                    intent = new Intent(HomeActivity.this, ANRMainActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
             }
         }
     };

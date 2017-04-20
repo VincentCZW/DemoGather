@@ -29,6 +29,8 @@
         <activity android:name=".activity.SychronizedTestActivity" />
         <activity android:name=".activity.WaitNotifyActivity"/>
         <activity android:name=".activity.RetrofitActivity"/>
+        <activity android:name=".diy_view.DiyViewMainActivity"/>
+        <activity android:name=".anr.ANRMainActivity"/>
     </application>
 
 </manifest>
