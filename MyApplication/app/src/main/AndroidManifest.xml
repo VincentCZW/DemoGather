@@ -31,6 +31,7 @@
         <activity android:name=".activity.RetrofitActivity"/>
         <activity android:name=".diy_view.DiyViewMainActivity"/>
         <activity android:name=".anr.ANRMainActivity"/>
+        <activity android:name=".java.JavaMainActivity"/>
     </application>
 
 </manifest>

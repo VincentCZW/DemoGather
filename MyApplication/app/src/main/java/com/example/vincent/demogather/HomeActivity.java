@@ -13,6 +13,7 @@ import com.example.vincent.demogather.activity.RetrofitActivity;
 import com.example.vincent.demogather.activity.TouchEventTestActivity;
 import com.example.vincent.demogather.anr.ANRMainActivity;
 import com.example.vincent.demogather.diy_view.DiyViewMainActivity;
+import com.example.vincent.demogather.java.JavaMainActivity;
 
 public class HomeActivity extends Activity {
 
@@ -22,6 +23,7 @@ public class HomeActivity extends Activity {
     private Button btnRetrofitTest;
     private Button diyViewTest;
     private Button anrTest;
+    private Button javaTest;
 
 
     @Override
@@ -40,6 +42,7 @@ public class HomeActivity extends Activity {
         btnRetrofitTest = (Button) findViewById(R.id.net_quest_test);
         diyViewTest = (Button) findViewById(R.id.diy_view_test);
         anrTest = (Button) findViewById(R.id.anr_test);
+        javaTest = (Button) findViewById(R.id.java_test);
     }
 
     private void bindListener() {
@@ -49,6 +52,7 @@ public class HomeActivity extends Activity {
         btnRetrofitTest.setOnClickListener(clickListener);
         diyViewTest.setOnClickListener(clickListener);
         anrTest.setOnClickListener(clickListener);
+        javaTest.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -79,6 +83,10 @@ public class HomeActivity extends Activity {
                     break;
                 case R.id.anr_test:
                     intent = new Intent(HomeActivity.this, ANRMainActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.java_test:
+                    intent = new Intent(HomeActivity.this, JavaMainActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
             }
