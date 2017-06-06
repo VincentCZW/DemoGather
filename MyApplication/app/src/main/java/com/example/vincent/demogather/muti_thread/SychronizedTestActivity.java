@@ -1,4 +1,4 @@
-package com.example.vincent.demogather.activity;
+package com.example.vincent.demogather.muti_thread;
 
 import android.app.Activity;
 import android.content.SyncStatusObserver;
@@ -167,13 +167,13 @@ public class SychronizedTestActivity extends Activity {
             public void run() {
                 Log.d("Vincent", "thread1 run");
                 sychronizedObjectOne.recycleLog1();
-                Log.d("Vincent", "recycleLog1 complete");
+                Log.e("Vincent", "recycleLog1 complete");
             }
         };
         Thread thread2 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread2 run");
+                Log.e("Vincent", "thread2 run");
                 SychronizedObject.recycleLog5();
             }
         };
@@ -185,14 +185,14 @@ public class SychronizedTestActivity extends Activity {
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread1 run");
+                Log.e("Vincent", "thread1 run");
                 SychronizedObject.recycleLog5();
             }
         };
         Thread thread2 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread2 run");
+                Log.e("Vincent", "thread2 run");
                 SychronizedObject.recycleLog6();
             }
         };

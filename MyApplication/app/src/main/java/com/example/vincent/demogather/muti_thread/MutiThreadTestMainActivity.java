@@ -1,4 +1,4 @@
-package com.example.vincent.demogather.activity;
+package com.example.vincent.demogather.muti_thread;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -54,6 +54,8 @@ public class MutiThreadTestMainActivity extends Activity {
                     MutiThreadTestMainActivity.this.startActivity(intent);
                     break;
                 case R.id.btn_produce_consume_test:
+                    intent = new Intent(MutiThreadTestMainActivity.this, ConsumerProducerActivity.class);
+                    MutiThreadTestMainActivity.this.startActivity(intent);
                     break;
             }
         }

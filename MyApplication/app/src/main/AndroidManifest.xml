@@ -25,13 +25,14 @@
         <activity android:name=".OtherActivity"/>
         <activity android:name=".activity.TouchEventTestActivity"/>
         <activity android:name=".activity.FrescoLoadImageListActivity"/>
-        <activity android:name=".activity.MutiThreadTestMainActivity"/>
-        <activity android:name=".activity.SychronizedTestActivity" />
-        <activity android:name=".activity.WaitNotifyActivity"/>
+        <activity android:name=".muti_thread.MutiThreadTestMainActivity"/>
+        <activity android:name=".muti_thread.SychronizedTestActivity" />
+        <activity android:name=".muti_thread.WaitNotifyActivity"/>
         <activity android:name=".activity.RetrofitActivity"/>
         <activity android:name=".diy_view.DiyViewMainActivity"/>
         <activity android:name=".anr.ANRMainActivity"/>
         <activity android:name=".java.JavaMainActivity"/>
+        <activity android:name=".muti_thread.ConsumerProducerActivity"/>
     </application>
 
 </manifest>

@@ -3,7 +3,6 @@ package com.example.vincent.demogather.view;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
-import android.view.Gravity;
 import android.view.MotionEvent;
 import android.widget.TextView;
 
@@ -15,8 +14,6 @@ public class TouchView extends TextView {
     public TouchView(Context context) {
         super(context);
         init();
-        hashCode();
-        equals(this);
     }
 
     public TouchView(Context context, AttributeSet attrs) {
@@ -30,8 +27,7 @@ public class TouchView extends TextView {
     }
 
     private void init() {
-//        setGravity(Gravity.CENTER);
-//        setText("谢谢");
+
     }
 
     @Override
@@ -71,7 +67,8 @@ public class TouchView extends TextView {
                 Log.d("Vincent", "TouchView 事件：抬起");
                 break;
         }
-        return super.onTouchEvent(event);
+        return true;
+//        return super.onTouchEvent(event);
 //        return true;
     }
 }

@@ -20,7 +20,7 @@ public class SychronizedObject {
 
     synchronized public void recycleLog1() {
         for (int i = 0; i < count; ++i) {
-            Log.d("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog1()" + "  输出：" + i);
+            Log.e("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog1()" + "  输出：" + i);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -31,7 +31,7 @@ public class SychronizedObject {
 
     synchronized public void recycleLog2() {
         for (int i = 0; i < count; ++i) {
-            Log.d("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog2()" + "  输出：" + i);
+            Log.e("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog2()" + "  输出：" + i);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -42,7 +42,7 @@ public class SychronizedObject {
 
     public void recycleLog3() {
         for (int i = 0; i < count; ++i) {
-            Log.d("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog3()" + "  输出：" + i);
+            Log.e("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog3()" + "  输出：" + i);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -53,7 +53,7 @@ public class SychronizedObject {
 
     public void recycleLog4() {
         for (int i = 6 ; i < 10; i++) {
-            Log.d("Vincent", "非synchronize修饰的代码段先执行");
+            Log.e("Vincent", "非synchronize修饰的代码段先执行");
             try {
                 Thread.sleep(300);
             } catch (InterruptedException e) {
@@ -62,7 +62,7 @@ public class SychronizedObject {
         }
         synchronized (this) {
             for (int i = 0; i < count; ++i) {
-                Log.d("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog4()" + "  输出：" + i);
+                Log.e("Vincent", "SychronizedObject：" + name + "  函数名：recycleLog4()" + "  输出：" + i);
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException e) {
@@ -71,7 +71,7 @@ public class SychronizedObject {
             }
         }
         for (int i = 6 ; i < 8; i++) {
-            Log.d("Vincent", " synchronized (this) 修饰的代码段后面代码执行");
+            Log.e("Vincent", " synchronized (this) 修饰的代码段后面代码执行");
             try {
                 Thread.sleep(300);
             } catch (InterruptedException e) {
@@ -82,7 +82,7 @@ public class SychronizedObject {
 
     synchronized static public void recycleLog5() {
         for (int i = 0; i < staticCount; ++i) {
-            Log.d("Vincent", "SychronizedObject：默认名字" + "  函数名：recycleLog5()" + "  输出：" + i);
+            Log.e("Vincent", "SychronizedObject：默认名字" + "  函数名：recycleLog5()" + "  输出：" + i);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {
@@ -93,7 +93,7 @@ public class SychronizedObject {
 
     synchronized static public void recycleLog6() {
         for (int i = 0; i < staticCount; ++i) {
-            Log.d("Vincent", "SychronizedObject：默认名字" + "  函数名：recycleLog6()" + "  输出：" + i);
+            Log.e("Vincent", "SychronizedObject：默认名字" + "  函数名：recycleLog6()" + "  输出：" + i);
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException e) {

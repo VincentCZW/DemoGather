@@ -2,14 +2,15 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion '19.1.0'
+    buildToolsVersion '21.0.1'
 
     defaultConfig {
         applicationId "com.example.vincent.demogather"
-        minSdkVersion 15
-        targetSdkVersion 23
+        minSdkVersion 19
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
+        multiDexEnabled true
     }
     buildTypes {
         release {
@@ -28,4 +29,21 @@ dependencies {
     compile 'com.android.support:support-v4:23.1.1'
     compile 'com.squareup.retrofit2:retrofit:2.0.2'
     compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta3'
+}
+
+afterEvaluate {
+    println("afterEvaluate")
+    tasks.matching {
+        it.name.startsWith('dex')
+    }.each {dx ->
+        def listFile = project.rootDir.absolutePath+'/app/maindexlist.txt'
+        println("root dir:"+project.rootDir.absolutePath)
+        println("dex task found :"+dx.name)
+        if(dx.additionalParameters == null){
+            dx.additionalParameters = []
+        }
+        dx.additionalParameters += '--multi-dex'
+        dx.additionalParameters += '--main-dex-list='+listFile
+        dx.additionalParameters += '--minimal-main-dex'
+    }
 }

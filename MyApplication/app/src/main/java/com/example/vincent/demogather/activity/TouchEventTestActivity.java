@@ -41,6 +41,14 @@ public class TouchEventTestActivity extends Activity {
             }
         });
 
+        touchViewGroup.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Log.d("Vincent", "touchViewGroup onClick()");
+            }
+        });
+
         touchView.setOnTouchListener(new View.OnTouchListener() {
 
             @Override

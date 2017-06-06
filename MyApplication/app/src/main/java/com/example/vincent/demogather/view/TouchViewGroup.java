@@ -84,6 +84,12 @@ public class TouchViewGroup extends RelativeLayout {
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         Log.d("Vincent", "TouchViewGroup onInterceptTouchEvent()");
 //        return true;
-        return false;
+        switch (ev.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                return true;
+            default:
+                return false;
+        }
+//        return false;
     }
 }

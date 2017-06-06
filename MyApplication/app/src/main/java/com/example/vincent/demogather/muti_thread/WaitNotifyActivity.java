@@ -1,4 +1,4 @@
-package com.example.vincent.demogather.activity;
+package com.example.vincent.demogather.muti_thread;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -32,7 +32,7 @@ public class WaitNotifyActivity extends Activity {
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread1 run");
+                Log.e("Vincent", "thread1 run");
                 synchronized (sychronizedObject1) {
                     sychronizedObject1.recycleLog1();
                     try {
@@ -40,7 +40,7 @@ public class WaitNotifyActivity extends Activity {
                         sychronizedObject1.recycleLog1();
                         sychronizedObject1.notify();
                         sleep(2000);
-                        Log.d("Vincent", "thread1 complete");
+                        Log.e("Vincent", "thread1 complete");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -51,13 +51,16 @@ public class WaitNotifyActivity extends Activity {
         final Thread thread2 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread2 run");
+                Log.e("Vincent", "thread2 run");
                 synchronized (sychronizedObject1) {
                     sychronizedObject1.recycleLog2();
                     try {
                         sychronizedObject1.notify();
+                        Log.d("Vincent", "已经notify");
                         sleep(5000);
+                        Log.d("Vincent", "sleep 5秒");
                         sychronizedObject1.wait();
+                        Log.d("Vincent", "thread2 wait");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -80,16 +83,16 @@ public class WaitNotifyActivity extends Activity {
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread1 run");
+                Log.e("Vincent", "thread1 run");
                 synchronized (sychronizedObject1) {
                     sychronizedObject1.recycleLog1();
                     try {
-                        Log.d("Vincent", "thread1 wait 3000");
+                        Log.e("Vincent", "thread1 wait 3000");
                         sychronizedObject1.wait(3000);
                         sychronizedObject1.recycleLog1();
                         sychronizedObject1.notify();
                         sleep(2000);
-                        Log.d("Vincent", "thread1 complete");
+                        Log.e("Vincent", "thread1 complete");
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
@@ -100,13 +103,13 @@ public class WaitNotifyActivity extends Activity {
         final Thread thread2 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread2 run");
+                Log.e("Vincent", "thread2 run");
                 synchronized (sychronizedObject1) {
                     sychronizedObject1.recycleLog2();
                     try {
-                        Log.d("Vincent", "thread2 sleep 5000");
+                        Log.e("Vincent", "thread2 sleep 5000");
                         sleep(5000);
-                        Log.d("Vincent", "thread2 wait");
+                        Log.e("Vincent", "thread2 wait");
                         sychronizedObject1.wait();
                     } catch (InterruptedException e) {
                         e.printStackTrace();
@@ -130,7 +133,7 @@ public class WaitNotifyActivity extends Activity {
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread1 run");
+                Log.e("Vincent", "thread1 run");
                 synchronized (SychronizedObject.class) {
                     sychronizedObject1.recycleLog1();
                     try {
@@ -147,11 +150,11 @@ public class WaitNotifyActivity extends Activity {
         final Thread thread2 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread2 run");
+                Log.e("Vincent", "thread2 run");
                 synchronized (SychronizedObject.class) {
                     sychronizedObject1.recycleLog2();
                     try {
-                        Log.d("Vincent", "thread2 wait");
+                        Log.e("Vincent", "thread2 wait");
                         SychronizedObject.class.notify();
                         SychronizedObject.class.wait();
                         sychronizedObject1.recycleLog2();
@@ -177,7 +180,7 @@ public class WaitNotifyActivity extends Activity {
         Thread thread1 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread1 run");
+                Log.e("Vincent", "thread1 run");
                 synchronized (SychronizedObject.class) {
                     sychronizedObject1.recycleLog1();
                     try {
@@ -194,12 +197,12 @@ public class WaitNotifyActivity extends Activity {
         final Thread thread2 = new Thread() {
             @Override
             public void run() {
-                Log.d("Vincent", "thread2 run");
+                Log.e("Vincent", "thread2 run");
                 sychronizedObject2.recycleLog5();
                 synchronized (SychronizedObject.class) {
                     sychronizedObject2.recycleLog2();
                     try {
-                        Log.d("Vincent", "thread2 wait");
+                        Log.e("Vincent", "thread2 wait");
                         SychronizedObject.class.notify();
                         SychronizedObject.class.wait();
                         sychronizedObject2.recycleLog2();

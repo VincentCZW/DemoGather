@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.vincent.demogather.activity.FrescoLoadImageListActivity;
-import com.example.vincent.demogather.activity.MutiThreadTestMainActivity;
+import com.example.vincent.demogather.muti_thread.MutiThreadTestMainActivity;
 import com.example.vincent.demogather.activity.RetrofitActivity;
 import com.example.vincent.demogather.activity.TouchEventTestActivity;
 import com.example.vincent.demogather.anr.ANRMainActivity;
