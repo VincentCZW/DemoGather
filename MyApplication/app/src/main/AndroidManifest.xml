@@ -33,6 +33,7 @@
         <activity android:name=".anr.ANRMainActivity"/>
         <activity android:name=".java.JavaMainActivity"/>
         <activity android:name=".muti_thread.ConsumerProducerActivity"/>
+        <activity android:name=".hotfix.HotFixActivity"/>
     </application>
 
 </manifest>

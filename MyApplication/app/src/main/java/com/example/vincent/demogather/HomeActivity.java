@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.vincent.demogather.activity.FrescoLoadImageListActivity;
+import com.example.vincent.demogather.hotfix.HotFixActivity;
 import com.example.vincent.demogather.muti_thread.MutiThreadTestMainActivity;
 import com.example.vincent.demogather.activity.RetrofitActivity;
 import com.example.vincent.demogather.activity.TouchEventTestActivity;
@@ -24,6 +25,7 @@ public class HomeActivity extends Activity {
     private Button diyViewTest;
     private Button anrTest;
     private Button javaTest;
+    private Button hotFixTest;
 
 
     @Override
@@ -43,6 +45,7 @@ public class HomeActivity extends Activity {
         diyViewTest = (Button) findViewById(R.id.diy_view_test);
         anrTest = (Button) findViewById(R.id.anr_test);
         javaTest = (Button) findViewById(R.id.java_test);
+        hotFixTest = (Button) findViewById(R.id.hot_fix);
     }
 
     private void bindListener() {
@@ -53,6 +56,7 @@ public class HomeActivity extends Activity {
         diyViewTest.setOnClickListener(clickListener);
         anrTest.setOnClickListener(clickListener);
         javaTest.setOnClickListener(clickListener);
+        hotFixTest.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -87,6 +91,10 @@ public class HomeActivity extends Activity {
                     break;
                 case R.id.java_test:
                     intent = new Intent(HomeActivity.this, JavaMainActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.hot_fix:
+                    intent = new Intent(HomeActivity.this, HotFixActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
             }
