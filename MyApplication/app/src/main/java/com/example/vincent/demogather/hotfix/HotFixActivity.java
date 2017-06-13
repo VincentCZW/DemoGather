@@ -36,6 +36,11 @@ public class HotFixActivity extends Activity {
         fixBtn.setOnClickListener(clickListener);
     }
 
+    private void fix() {
+        HotFixUtils.copyFile(getCacheDir().toString() + "/classes4.dex", "/storage/emulated/0/classes4.dex");
+        HotFixUtils.loadFixedDex(this);
+    }
+
     private View.OnClickListener clickListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
@@ -44,6 +49,8 @@ public class HotFixActivity extends Activity {
                     FixedClass.fix(HotFixActivity.this);
                     break;
                 case R.id.fix:
+                    HotFixUtils.print(HotFixActivity.this);
+                    fix();
                     break;
             }
         }

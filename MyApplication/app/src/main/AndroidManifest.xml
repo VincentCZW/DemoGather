@@ -4,6 +4,8 @@
     package="com.example.vincent.demogather" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
         android:name=".application.DemoApplication"
@@ -34,6 +36,8 @@
         <activity android:name=".java.JavaMainActivity"/>
         <activity android:name=".muti_thread.ConsumerProducerActivity"/>
         <activity android:name=".hotfix.HotFixActivity"/>
+        <activity android:name=".butter_knife.ButterKnifeMainActivity"/>
+        <activity android:name=".OpenStructureMainActivity"/>
     </application>
 
 </manifest>

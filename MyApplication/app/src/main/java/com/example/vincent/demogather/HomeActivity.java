@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.vincent.demogather.activity.FrescoLoadImageListActivity;
+import com.example.vincent.demogather.butter_knife.ButterKnifeMainActivity;
 import com.example.vincent.demogather.hotfix.HotFixActivity;
 import com.example.vincent.demogather.muti_thread.MutiThreadTestMainActivity;
 import com.example.vincent.demogather.activity.RetrofitActivity;
@@ -19,13 +20,12 @@ import com.example.vincent.demogather.java.JavaMainActivity;
 public class HomeActivity extends Activity {
 
     private Button btnTouchEventTest;
-    private Button btnFrescoTest;
     private Button btnMutiThread;
-    private Button btnRetrofitTest;
     private Button diyViewTest;
     private Button anrTest;
     private Button javaTest;
     private Button hotFixTest;
+    private Button openStructureTest;
 
 
     @Override
@@ -39,24 +39,22 @@ public class HomeActivity extends Activity {
 
     private void initViews() {
         btnTouchEventTest = (Button) findViewById(R.id.touch_event_test);
-        btnFrescoTest = (Button) findViewById(R.id.fresco_test);
         btnMutiThread = (Button) findViewById(R.id.muti_thread_test);
-        btnRetrofitTest = (Button) findViewById(R.id.net_quest_test);
         diyViewTest = (Button) findViewById(R.id.diy_view_test);
         anrTest = (Button) findViewById(R.id.anr_test);
         javaTest = (Button) findViewById(R.id.java_test);
         hotFixTest = (Button) findViewById(R.id.hot_fix);
+        openStructureTest = (Button) findViewById(R.id.android_develop_structure);
     }
 
     private void bindListener() {
         btnTouchEventTest.setOnClickListener(clickListener);
-        btnFrescoTest.setOnClickListener(clickListener);
         btnMutiThread.setOnClickListener(clickListener);
-        btnRetrofitTest.setOnClickListener(clickListener);
         diyViewTest.setOnClickListener(clickListener);
         anrTest.setOnClickListener(clickListener);
         javaTest.setOnClickListener(clickListener);
         hotFixTest.setOnClickListener(clickListener);
+        openStructureTest.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -69,16 +67,8 @@ public class HomeActivity extends Activity {
                     intent = new Intent(HomeActivity.this, TouchEventTestActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
-                case R.id.fresco_test:
-                    intent = new Intent(HomeActivity.this, FrescoLoadImageListActivity.class);
-                    HomeActivity.this.startActivity(intent);
-                    break;
                 case R.id.muti_thread_test:
                     intent = new Intent(HomeActivity.this, MutiThreadTestMainActivity.class);
-                    HomeActivity.this.startActivity(intent);
-                    break;
-                case R.id.net_quest_test:
-                    intent = new Intent(HomeActivity.this, RetrofitActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
                 case R.id.diy_view_test:
@@ -95,6 +85,10 @@ public class HomeActivity extends Activity {
                     break;
                 case R.id.hot_fix:
                     intent = new Intent(HomeActivity.this, HotFixActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.android_develop_structure:
+                    intent = new Intent(HomeActivity.this, OpenStructureMainActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
             }
