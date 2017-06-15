@@ -70,8 +70,6 @@
             android:gravity="center"
             android:text="热修复" />
 
-
-
         <Button
             android:id="@+id/android_develop_structure"
             android:layout_width="match_parent"

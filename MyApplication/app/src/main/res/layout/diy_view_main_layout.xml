@@ -3,7 +3,7 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.vincent.demogather.diy_view.view.ShortVideoProgressBar
+    <com.example.annotation_tool.demogather.diy_view.view.ShortVideoProgressBar
         android:id="@+id/short_video_progress_bar"
         android:layout_width="match_parent"
         android:layout_height="5dp"

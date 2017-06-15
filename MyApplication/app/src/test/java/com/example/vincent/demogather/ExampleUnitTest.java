@@ -1,4 +1,4 @@
-package com.example.vincent.demogather;
+package com.example.annotation_tool.demogather;
 
 import org.junit.Test;
 

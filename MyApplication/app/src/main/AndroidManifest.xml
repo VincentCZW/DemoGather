@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vincent.demogather" >
+    package="com.example.annotation_tool.demogather" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
 
     <application
-        android:name=".application.DemoApplication"
+        android:name="com.example.annotation_tool.demogather.application.DemoApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".HomeActivity"
+            android:name="com.example.annotation_tool.demogather.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,20 +24,22 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".OtherActivity"/>
-        <activity android:name=".activity.TouchEventTestActivity"/>
-        <activity android:name=".activity.FrescoLoadImageListActivity"/>
-        <activity android:name=".muti_thread.MutiThreadTestMainActivity"/>
-        <activity android:name=".muti_thread.SychronizedTestActivity" />
-        <activity android:name=".muti_thread.WaitNotifyActivity"/>
-        <activity android:name=".activity.RetrofitActivity"/>
-        <activity android:name=".diy_view.DiyViewMainActivity"/>
-        <activity android:name=".anr.ANRMainActivity"/>
-        <activity android:name=".java.JavaMainActivity"/>
-        <activity android:name=".muti_thread.ConsumerProducerActivity"/>
-        <activity android:name=".hotfix.HotFixActivity"/>
-        <activity android:name=".butter_knife.ButterKnifeMainActivity"/>
-        <activity android:name=".OpenStructureMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.OtherActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.activity.TouchEventTestActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.activity.FrescoLoadImageListActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.muti_thread.MutiThreadTestMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.muti_thread.SychronizedTestActivity" />
+        <activity android:name="com.example.annotation_tool.demogather.muti_thread.WaitNotifyActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.activity.RetrofitActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.diy_view.DiyViewMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.anr.ANRMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.java.JavaMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.muti_thread.ConsumerProducerActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.hotfix.HotFixActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.butter_knife.ButterKnifeMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.OpenStructureMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.annotation.AnnotationMainActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.annotation.CompileAnnotationMainActivity"/>
     </application>
 
 </manifest>
