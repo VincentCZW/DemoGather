@@ -9,6 +9,7 @@ import android.widget.Button;
 import com.example.annotation_tool.demogather.activity.FrescoLoadImageListActivity;
 import com.example.annotation_tool.demogather.activity.RetrofitActivity;
 import com.example.annotation_tool.demogather.butter_knife.ButterKnifeMainActivity;
+import com.example.annotation_tool.demogather.event_bus.EventBusMainActivity;
 
 
 /**
@@ -21,6 +22,7 @@ public class OpenStructureMainActivity extends Activity {
     private Button frescoBtn;
     private Button retrofitBtn;
     private Button butterKnifeBtn;
+    private Button eventBus;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -34,12 +36,14 @@ public class OpenStructureMainActivity extends Activity {
         frescoBtn = (Button) findViewById(R.id.fresco_test);
         retrofitBtn = (Button) findViewById(R.id.retrofit_test);
         butterKnifeBtn = (Button) findViewById(R.id.butter_knife);
+        eventBus = (Button) findViewById(R.id.event_bus);
     }
 
     private void bindEvent() {
         frescoBtn.setOnClickListener(clickListener);
         retrofitBtn.setOnClickListener(clickListener);
         butterKnifeBtn.setOnClickListener(clickListener);
+        eventBus.setOnClickListener(clickListener);
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
@@ -57,6 +61,10 @@ public class OpenStructureMainActivity extends Activity {
                     break;
                 case R.id.butter_knife:
                     intent = new Intent(OpenStructureMainActivity.this, ButterKnifeMainActivity.class);
+                    startActivity(intent);
+                    break;
+                case R.id.event_bus:
+                    intent = new Intent(OpenStructureMainActivity.this, EventBusMainActivity.class);
                     startActivity(intent);
                     break;
             }

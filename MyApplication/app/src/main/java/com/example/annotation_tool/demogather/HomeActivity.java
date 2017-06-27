@@ -20,6 +20,7 @@ public class HomeActivity extends Activity {
     private Button btnMutiThread;
     private Button diyViewTest;
     private Button anrTest;
+    private Button androidTest;
     private Button javaTest;
     private Button hotFixTest;
     private Button openStructureTest;
@@ -39,6 +40,7 @@ public class HomeActivity extends Activity {
         btnMutiThread = (Button) findViewById(R.id.muti_thread_test);
         diyViewTest = (Button) findViewById(R.id.diy_view_test);
         anrTest = (Button) findViewById(R.id.anr_test);
+        androidTest = (Button) findViewById(R.id.android_test);
         javaTest = (Button) findViewById(R.id.java_test);
         hotFixTest = (Button) findViewById(R.id.hot_fix);
         openStructureTest = (Button) findViewById(R.id.android_develop_structure);
@@ -49,6 +51,7 @@ public class HomeActivity extends Activity {
         btnMutiThread.setOnClickListener(clickListener);
         diyViewTest.setOnClickListener(clickListener);
         anrTest.setOnClickListener(clickListener);
+        androidTest.setOnClickListener(clickListener);
         javaTest.setOnClickListener(clickListener);
         hotFixTest.setOnClickListener(clickListener);
         openStructureTest.setOnClickListener(clickListener);
@@ -74,6 +77,10 @@ public class HomeActivity extends Activity {
                     break;
                 case R.id.anr_test:
                     intent = new Intent(HomeActivity.this, ANRMainActivity.class);
+                    HomeActivity.this.startActivity(intent);
+                    break;
+                case R.id.android_test:
+                    intent = new Intent(HomeActivity.this, AndroidMainActivity.class);
                     HomeActivity.this.startActivity(intent);
                     break;
                 case R.id.java_test:

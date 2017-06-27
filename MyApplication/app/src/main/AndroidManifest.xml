@@ -40,6 +40,10 @@
         <activity android:name="com.example.annotation_tool.demogather.OpenStructureMainActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.annotation.AnnotationMainActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.annotation.CompileAnnotationMainActivity"/>
+        <activity android:name=".event_bus.EventBusMainActivity" />
+        <activity android:name=".event_bus.EventBusSecondActivity" />
+        <activity android:name=".android.StorageDirMainActivity"/>
+        <activity android:name=".AndroidMainActivity"/>
     </application>
 
 </manifest>

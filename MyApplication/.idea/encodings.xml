@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/annotation_processor/src/main/java/com/example/vincent/processor/annotation/TestAnnotation.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/annotation_processor/src/main/java/com/example/vincent/processor/annotation/TestAnnotation2.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/myannotation/src/main/java/com/example/AnnoField.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/myannotation/src/main/java/com/example/AnnoMethod.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/myprocessor/src/main/java/com/example/DemoProcessor.java" charset="GBK" />
