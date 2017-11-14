@@ -26,11 +26,11 @@
 
         <activity android:name="com.example.annotation_tool.demogather.OtherActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.activity.TouchEventTestActivity"/>
-        <activity android:name="com.example.annotation_tool.demogather.activity.FrescoLoadImageListActivity"/>
+        <activity android:name=".fresco.FrescoLoadImageListActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.muti_thread.MutiThreadTestMainActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.muti_thread.SychronizedTestActivity" />
         <activity android:name="com.example.annotation_tool.demogather.muti_thread.WaitNotifyActivity"/>
-        <activity android:name="com.example.annotation_tool.demogather.activity.RetrofitActivity"/>
+        <activity android:name=".retrofit.RetrofitActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.diy_view.DiyViewMainActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.anr.ANRMainActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.java.JavaMainActivity"/>

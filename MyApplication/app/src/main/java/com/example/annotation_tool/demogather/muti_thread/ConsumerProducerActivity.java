@@ -6,6 +6,8 @@ import android.os.Bundle;
 import com.example.annotation_tool.demogather.R;
 import com.example.annotation_tool.demogather.common.VincentLog;
 
+import java.util.LinkedList;
+
 /**
  * Created by VincentChen on 2017/4/27.
  */

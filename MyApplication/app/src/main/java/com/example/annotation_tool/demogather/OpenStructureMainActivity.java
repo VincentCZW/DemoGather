@@ -6,8 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.annotation_tool.demogather.activity.FrescoLoadImageListActivity;
-import com.example.annotation_tool.demogather.activity.RetrofitActivity;
+import com.example.annotation_tool.demogather.fresco.FrescoLoadImageListActivity;
+import com.example.annotation_tool.demogather.retrofit.RetrofitActivity;
 import com.example.annotation_tool.demogather.butter_knife.ButterKnifeMainActivity;
 import com.example.annotation_tool.demogather.event_bus.EventBusMainActivity;
 

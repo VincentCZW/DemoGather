@@ -1,4 +1,4 @@
-package com.example.annotation_tool.demogather.activity;
+package com.example.annotation_tool.demogather.fresco;
 
 import android.app.Activity;
 import android.os.Bundle;
