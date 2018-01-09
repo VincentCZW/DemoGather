@@ -8,4 +8,10 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:background="#000000"/>
+
+    <com.example.annotation_tool.demogather.view.ClipRectView
+        android:id="@+id/clip_recr_view"
+        android:layout_width="200dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="20dp"/>
 </LinearLayout>

@@ -4,11 +4,18 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.util.ArrayMap;
+import android.util.SparseArray;
 import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
 import com.example.annotation_tool.demogather.R;
+
+import java.util.ArrayList;
+import java.util.LinkedHashMap;
+import java.util.concurrent.ArrayBlockingQueue;
+import java.util.concurrent.ConcurrentHashMap;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -42,5 +49,12 @@ public class ButterKnifeMainActivity extends FragmentActivity {
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.add(R.id.butter_knife_fragment_container, fragment);
         transaction.commit();
+//        ArrayMap
+//        SparseArray
+//        ConcurrentHashMap
+//        ArrayList
+//        LinkedHashMap
+//        ArrayBlockingQueue
     }
+
 }

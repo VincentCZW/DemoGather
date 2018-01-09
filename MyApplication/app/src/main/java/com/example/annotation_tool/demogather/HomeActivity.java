@@ -31,9 +31,12 @@ public class HomeActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+        ViewServer.get(this).addWindow(this);
+
         initViews();
         bindListener();
     }
+
 
     private void initViews() {
         btnTouchEventTest = (Button) findViewById(R.id.touch_event_test);
@@ -109,6 +112,7 @@ public class HomeActivity extends Activity {
     protected void onResume() {
         super.onResume();
         Log.d("Vincent", "Home onResume");
+        ViewServer.get(this).setFocusedWindow(this);
     }
 
     @Override
@@ -133,5 +137,6 @@ public class HomeActivity extends Activity {
     protected void onDestroy() {
         super.onDestroy();
         Log.d("Vincent", "Home onDestroy");
+        ViewServer.get(this).removeWindow(this);
     }
 }

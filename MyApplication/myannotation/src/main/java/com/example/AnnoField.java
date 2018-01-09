@@ -8,7 +8,7 @@ import java.lang.annotation.Target;
 /**
  * Created by VincentChen on 2017/6/14.
  *
- * ±‡“Î ±◊¢Ω‚≤‚ ‘
+ * ???????????
  */
 @Retention(RetentionPolicy.CLASS)
 @Target(ElementType.FIELD)
