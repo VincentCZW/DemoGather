@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.annotation_tool.demogather" >
 
     <uses-permission android:name="android.permission.INTERNET"/>
@@ -13,7 +14,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:debuggable="true"
+        tools:ignore="HardcodedDebugMode">
         <activity
             android:name="com.example.annotation_tool.demogather.HomeActivity"
             android:theme="@style/AppTheme.NoActionBar" >
@@ -24,7 +27,10 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.example.annotation_tool.demogather.OtherActivity"/>
+        <activity android:name="com.example.annotation_tool.demogather.OtherActivity"
+            android:process=":other">
+
+        </activity>
         <activity android:name="com.example.annotation_tool.demogather.activity.TouchEventTestActivity"/>
         <activity android:name=".fresco.FrescoLoadImageListActivity"/>
         <activity android:name="com.example.annotation_tool.demogather.muti_thread.MutiThreadTestMainActivity"/>
@@ -44,6 +50,11 @@
         <activity android:name=".event_bus.EventBusSecondActivity" />
         <activity android:name=".android.StorageDirMainActivity"/>
         <activity android:name=".AndroidMainActivity"/>
+        <activity android:name=".effect.EffectMainActivity"/>
+        <activity android:name=".effect.MemoryActivity"/>
+        <activity android:name=".effect.UiBlockMainActivity"/>
+        <activity android:name=".effect.SPMainActivity"/>
+
     </application>
 
 </manifest>

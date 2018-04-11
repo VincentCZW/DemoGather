@@ -89,5 +89,26 @@
             android:layout_marginTop="4dp"
             android:gravity="center"
             android:text="开源框架" />
+
+        <Button
+            android:id="@+id/effect_optimize"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="性能优化" />
+
+
+        <Button
+            android:id="@+id/other"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="Other" />
     </LinearLayout>
 </ScrollView>

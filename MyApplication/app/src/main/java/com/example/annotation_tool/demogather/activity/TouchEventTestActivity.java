@@ -10,6 +10,8 @@ import com.example.annotation_tool.demogather.R;
 import com.example.annotation_tool.demogather.view.TouchView;
 import com.example.annotation_tool.demogather.view.TouchViewGroup;
 
+import java.util.concurrent.ThreadPoolExecutor;
+
 /**
  * Created by VincentChen on 2016/10/17.
  */
@@ -51,7 +53,7 @@ public class TouchEventTestActivity extends Activity {
 
         touchView.setOnTouchListener(new View.OnTouchListener() {
 
-            @Override
+            @Override   
             public boolean onTouch(View v, MotionEvent event) {
                 Log.d("Vincent", "TouchView onTouch()");
                 return false;
@@ -86,6 +88,7 @@ public class TouchEventTestActivity extends Activity {
         }
         return super.dispatchTouchEvent(ev);
     }
+
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
