@@ -3,6 +3,7 @@ package com.example.annotation_tool.demogather;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 
 import com.example.annotation_tool.demogather.android.StorageDirMainActivity;
@@ -18,6 +19,9 @@ public class AndroidMainActivity extends Activity {
         setContentView(R.layout.activity_android_main_layout);
 
         findViewById(R.id.btn_storage).setOnClickListener(clickListener);
+
+        Log.d("Vincent", "develop test 3");
+
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
