@@ -52,6 +52,7 @@ public class HomeActivity extends Activity {
         }).start();
 
         Log.d("Vincent", "test 1");
+        Log.d("Vincent", "test 2");
         try {
             Thread.sleep(90);
         } catch (InterruptedException e) {
