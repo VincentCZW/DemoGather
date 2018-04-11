@@ -21,6 +21,7 @@ public class AndroidMainActivity extends Activity {
         findViewById(R.id.btn_storage).setOnClickListener(clickListener);
 
         Log.d("Vincent", "develop test 3");
+        Log.d("Vincent", "develop test 4");
 
     }
 
