@@ -35,6 +35,9 @@ public class OtherActivity extends Activity {
                 showDialog();
             }
         },1500);
+
+        Log.d("Vincent", "topic3 commit 1");
+
     }
 
     @Override
