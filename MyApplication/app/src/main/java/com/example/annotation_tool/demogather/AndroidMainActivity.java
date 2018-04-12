@@ -23,6 +23,8 @@ public class AndroidMainActivity extends Activity {
         Log.d("Vincent", "develop test 3");
         Log.d("Vincent", "develop test 4");
 
+        Log.d("Vincent", "topic2 commit 1");
+
     }
 
     private View.OnClickListener clickListener = new View.OnClickListener() {
