@@ -38,6 +38,8 @@ public class OtherActivity extends Activity {
 
         Log.d("Vincent", "topic3 commit 1");
 
+        Log.d("Vincent", "topic4 commit 13");
+
     }
 
     @Override
