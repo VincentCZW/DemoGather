@@ -56,6 +56,8 @@ public class HomeActivity extends Activity {
         Log.d("Vincent", "topic test 1");
         Log.d("Vincent", "topic test 2");
 
+        Log.d("Vincent", "topic4 commit 11");
+
 
         try {
             Thread.sleep(90);
