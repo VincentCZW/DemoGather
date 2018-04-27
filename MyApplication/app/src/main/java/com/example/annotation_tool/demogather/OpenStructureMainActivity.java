@@ -3,6 +3,7 @@ package com.example.annotation_tool.demogather;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -37,6 +38,8 @@ public class OpenStructureMainActivity extends Activity {
         retrofitBtn = (Button) findViewById(R.id.retrofit_test);
         butterKnifeBtn = (Button) findViewById(R.id.butter_knife);
         eventBus = (Button) findViewById(R.id.event_bus);
+
+        Log.d("Vincent", "topic4 commit 12");
     }
 
     private void bindEvent() {
