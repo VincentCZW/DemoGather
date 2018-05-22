@@ -74,6 +74,9 @@ public class DemoApplication extends Application {
     @Override
     public void onTerminate() {
         Log.d("Vincent", "DemoApplication onTerminate()");
+        Log.d("Vincent", "topic 2 test commit 01");
+        Log.d("Vincent", "topic 2 test commit 02");
+
         super.onTerminate();
     }
 
