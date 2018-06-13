@@ -101,6 +101,8 @@ public class HomeActivity extends BaseActivity {
 //
 //        A.D d = new A.D();
 //        A.D.E e = d.new E();
+
+        Log.d("Vincent","onCreate()");
     }
 
 
