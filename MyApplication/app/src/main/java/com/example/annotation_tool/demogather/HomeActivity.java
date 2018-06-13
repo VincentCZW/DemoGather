@@ -2,6 +2,8 @@ package com.example.annotation_tool.demogather;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -19,8 +21,14 @@ import com.example.annotation_tool.demogather.diy_view.DiyViewMainActivity;
 import com.example.annotation_tool.demogather.java.JavaMainActivity;
 import com.example.annotation_tool.demogather.test.A;
 import com.example.annotation_tool.demogather.test.IPCData;
+import com.example.annotation_tool.demogather.test.TestService;
+import com.example.annotation_tool.demogather.test.TestService1;
+import com.example.annotation_tool.demogather.test.TestService2;
+import com.example.annotation_tool.demogather.test.TestService3;
+import com.example.annotation_tool.demogather.test.TestService4;
+import com.example.annotation_tool.demogather.test.TestService5;
 
-public class HomeActivity extends Activity {
+public class HomeActivity extends BaseActivity {
 
     private View mContentView;
 

@@ -1,6 +1,5 @@
 package com.example.annotation_tool.demogather.effect;
 
-import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -9,13 +8,14 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.annotation_tool.demogather.BaseActivity;
 import com.example.annotation_tool.demogather.R;
 
 /**
  * Created by vincent on 2018/1/12.
  */
 
-public class MemoryActivity extends Activity {
+public class MemoryActivity extends BaseActivity {
 
     private static MemoryLeakClass leakClass = null;
 

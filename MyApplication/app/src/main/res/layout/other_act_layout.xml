@@ -3,13 +3,19 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/test_tv"
+    <Button
+        android:id="@+id/test_start_memory"
         android:layout_width="fill_parent"
         android:layout_height="40dp"
         android:layout_marginTop="10dp"
         android:gravity="center"
-        android:text="继承类"/>
+        android:text="开始内存使用"/>
 
-
+    <Button
+        android:id="@+id/test_improve_memory"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="加大内存使用"/>
 </LinearLayout>
